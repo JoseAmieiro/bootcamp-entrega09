@@ -10,8 +10,16 @@ DataBusiness.getCharacters().then((data) => {
   for (let user of users) {
     const node = Utils.createCharacterRow(user);
     node.onclick = function () {
-      DataBusiness.getCharacterById(user.id).then((dataBis) => {
+      DataBusiness.getCharacterById(user.id).then(dataBis => {
         Utils.showCharacter(dataBis);
+      });
+
+      DataBusiness.getEpisode().then(data => {
+        
+        for (let episode of data.results) {
+          const element = Utils.createEpisode(episode);
+          Utils.showEpisode(element);
+        }
       });
     };
 

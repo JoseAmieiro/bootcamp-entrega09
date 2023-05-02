@@ -37,7 +37,6 @@ const createCharacterRow = (character) => {
   };
   
   const showCharacter = (character) => {
-    console.log("character", character);
     const characterDetail = document.getElementById("character-detail");
   
     characterDetail.innerHTML = "";
@@ -53,5 +52,16 @@ const createCharacterRow = (character) => {
     return element;
   };
   
-  export { createCharacterRow, showCharacter };
+  const createEpisode = (episode) => {
+    const element = document.createElement("span");
+    element.innerText = episode.name;
+  
+    return element;
+  };
+
+  const showEpisode = (element) => {
+    const characterDetail = document.getElementById("character-detail");
+    characterDetail.appendChild(element);
+  }
+  export { createCharacterRow, showCharacter, createEpisode, showEpisode };
   

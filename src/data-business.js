@@ -14,4 +14,13 @@ function getCharacterById(id) {
       return response.data;
     });
 }
-export { getCharacters, getCharacterById };
+
+function getEpisode() {
+  return axios.get("https://rickandmortyapi.com/api/episode")
+  .then(response => {
+    return response.data;
+  });
+}
+
+
+export { getCharacters, getCharacterById, getEpisode };
