@@ -10,9 +10,10 @@ body {
   }
   
   #character-detail {
+    overflow: auto;
     position: fixed;
     right: 0;
-    padding: 25px;
+    padding: 15px 15px 0px 15px;
     background-color: #666;
     color: white;
     font-size: 140%;

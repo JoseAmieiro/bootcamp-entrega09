@@ -38,12 +38,12 @@ const createCharacterRow = (character) => {
   
   const showCharacter = (character) => {
     const characterDetail = document.getElementById("character-detail");
-  
     characterDetail.innerHTML = "";
     characterDetail.appendChild(createAvatarDetail(character));
     characterDetail.appendChild(createParagraph("Name: " + character.name));
     characterDetail.appendChild(createParagraph("Status: " + character.status));
     characterDetail.appendChild(createParagraph("Species: " + character.species));
+    characterDetail.appendChild(createParagraph("Listado de capitulos:"));
   };
   
   const createParagraph = (text) => {
@@ -52,16 +52,12 @@ const createCharacterRow = (character) => {
     return element;
   };
   
-  const createEpisode = (episode) => {
-    const element = document.createElement("span");
-    element.innerText = episode.name;
-  
-    return element;
-  };
 
-  const showEpisode = (element) => {
+
+  const showEpisode = (episode) => {
     const characterDetail = document.getElementById("character-detail");
-    characterDetail.appendChild(element);
-  }
-  export { createCharacterRow, showCharacter, createEpisode, showEpisode };
+    characterDetail.appendChild(createParagraph("Capitulo " + episode.id));
+    characterDetail.appendChild(createParagraph(episode.name));
+  };
+  export { createCharacterRow, showCharacter, showEpisode };
   
