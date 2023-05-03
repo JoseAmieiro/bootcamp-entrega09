@@ -43,7 +43,7 @@ const createCharacterRow = (character) => {
     characterDetail.appendChild(createParagraph("Name: " + character.name));
     characterDetail.appendChild(createParagraph("Status: " + character.status));
     characterDetail.appendChild(createParagraph("Species: " + character.species));
-    characterDetail.appendChild(createParagraph("Listado de capitulos:"));
+    characterDetail.appendChild(createParagraph("Listado de capítulos:"));
   };
   
   const createParagraph = (text) => {
@@ -56,8 +56,8 @@ const createCharacterRow = (character) => {
 
   const showEpisode = (episode) => {
     const characterDetail = document.getElementById("character-detail");
-    characterDetail.appendChild(createParagraph("Capitulo " + episode.id));
-    characterDetail.appendChild(createParagraph(episode.name));
+    characterDetail.appendChild(createParagraph("+ Capítulo " + episode.id));
+    characterDetail.appendChild(createParagraph("-   " + episode.name));
   };
   export { createCharacterRow, showCharacter, showEpisode };
   
